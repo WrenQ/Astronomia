@@ -1,0 +1,165 @@
+<! doctype html>
+<html lang="es">
+<script type="text/javascript" src="chatServer.js"></script>
+<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <title> Para chatear (muy simple) </title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<style type="text/css">
+
+    @font-face {
+      font-family: tron;
+      src: url('dist/fonts/MDMA.ttf');
+    }
+
+    * { padding: 0; margin: 0; }
+
+    body {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 13px;
+      background:url('http://www.dream-wallpaper.com/free-wallpaper/art-wallpaper/minimalist-design-1-wallpaper/1920x1200/free-wallpaper-24.jpg') no-repeat fixed;
+      background-size: cover;
+    }
+
+    h1{
+      font-family: tron;
+      font-size: 60px;
+      color: black;
+      text-align: center;
+    }
+    #wrapper { 
+     margin: 0 auto;
+     margin-top: 7%;
+     width: 922px;
+     color: #333;
+     background:gray;
+     border-radius: 20;
+
+    }
+    #columnas {
+     margin-bottom: 0px;
+     overflow: auto; 
+     width: 100%;
+    }
+    #header { 
+     width: 902px;
+     padding: 10px;
+     height: 600px;
+     margin: 10px 0px 0px 0px;
+    }
+    #Barra_salas { 
+     border-top-left-radius:  10;
+     border-top-right-radius: 10;
+     padding: 10px;
+     margin: 0px 0px 0px 0px;
+     background: #000000;
+
+    }
+    #columnaizq { 
+     display: inline;
+     color: #999;
+     margin:10px;
+     padding:0;
+     width: 195px;
+     float: left;
+
+    }
+
+    #Boton_salas li{
+      display: inline;
+      padding-right:2%;
+      text-decoration: none;
+    }
+    #Boton_salas {
+      padding-left: 13%;
+    }
+
+
+    #Entrada{ 
+     border-bottom-left-radius:  10;
+     border-bottom-right-radius: 10;
+     width: 880px;
+     clear: both;
+     color: #333;
+     background: black;
+     margin: 0px 0px 10px 0px;
+     padding: 10px;
+    }
+  </style>
+<body> 
+
+
+
+<div id="wrapper">
+  <h1>CHAT RANDOM</h1>
+  <div id="header">
+    
+  <div id="Barra_salas">
+    <form>
+    <ul id="Boton_salas">
+      <li> <input type="submit" value=" Sala General " onclick="cambioSala('General');"> </li>
+      <li> <input type="submit" value=" Sala Música " onclick="cambioSala('Musica');"> </li>
+      <li> <input type="submit" value=" Sala Cine " onclick="cambioSala('Cine');"> </li>
+      <li> <input type="submit" value=" Sala Videojuegos " onclick="cambioSala('Videojuegos');"> </li>
+      <li> <textarea id="NombreSala" rows="1" cols="25" readonly></textarea></li>
+    </ul>
+  </form>
+  </div>
+
+  <div id="columnas">
+    <!-- Begin Left Column -->
+    <div id="columnaizq">
+     <textarea id="mensajes" readonly cols="108" maxcols="80" rows="31"></textarea>
+    </div>
+  </div>
+  <!-- End Faux Columns -->
+  <div id="Entrada">
+    <form action="#" onsubmit="enviar();">
+      <input type="text" id="mensaje" autofocus placeholder="Su mensaje" size="140">
+    </form>
+  </div>
+ </div>
+<!-- End Wrapper -->
+</body>
+  <script>
+      var socket = io.connect(),
+        elm = document.getElementById("mensajes"), nick;
+
+        NombreSala.value=" Sala actual: General";
+
+      socket.emit('UserNickname', prompt('Introduzca su nombre de usuario.'));
+      socket.emit('inicio',{});
+
+
+      function enviar() {
+        socket.emit('cliente', {'msg': document.getElementById('mensaje').value});
+        document.getElementById('mensaje').value = "";
+      }
+
+      function cambioSala(valorSala) {
+       /*socket.emit('cambiarSala', document.getElementById('Salas').value);*/
+       
+       socket.emit('cambiarSala', valorSala);
+       NombreSala.value= " Sala actual: " + valorSala;
+
+      }
+
+      socket.on('connect', function() {
+        //socket.emit('cliente', {'msg': 'acabo de conectarme'});
+      });
+
+      socket.on('message', function(data) {
+        elm.value = elm.value + "\n" + data;
+      });
+
+      socket.on('disconnect', function(msg) {
+        elm.value = elm.value + "\n" + "Conexión cerrada: " + msg;
+      });
+
+      socket.on('chat', function(data) {
+        elm.value =   elm.value + "\n" + data.from  + " : " + data.msg;
+      });
+    </script>
+</html>

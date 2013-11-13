@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Astronomía para doomies</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="dist/css/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Navegación</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Astronomía</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Inicio</a></li>
+                <li><a href="#about">Más información</a></li>
+                <li><a onclick="window.open('chatClient.html','mywindow', 'location=no,status=1,scrollbars=1,width=800,height=600'); return false;" href="#">Chat</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enlaces de interés<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://www.google.es/search?q=astronom%C3%ADa+wiki&oq=astronom%C3%ADa+wiki&aqs=chrome..69i57j69i61l2j0l3.2227j0j4&sourceid=chrome&espv=210&es_sm=122&ie=UTF-8#es_sm=122&espv=210&q=+site:wikipedia.org+astronom%C3%ADa+wiki&safe=off" target="_blank">Enlaces de Wikipedia</a></li>
+                    <li><a href="https://www.google.es/search?q=wallpapers+HD+astronomy&safe=off&espv=210&es_sm=122&tbm=isch&tbo=u&source=univ&sa=X&ei=t-h7UtWAEoOm0wWipoG4Bw&ved=0CDAQsAQ&biw=1920&bih=875" target="_blank">Wallpapers</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.google.android.stardroid&hl=es" target="_blank">App para móviles</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Instituciones</li>
+                    <li><a href="http://www.nasa.gov/" target="_blank">Web oficial de la NASA</a></li>
+                    <li><a href="http://www.esa.int/esl/ESA_in_your_country/Spain" target="_blank">Web oficial de la ESA</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="http://media.impacto.mx/imagenes/large/4ff6b506b677332964010bde.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Curiosity encontró restos de agua en el polvo de Marte</h1>
+              <p>En la tierra de la superficie de Marte halló 2% de agua y materiales orgánicos cuyo origen no se ha determinado aún.</p>
+              <p><a class="btn btn-lg btn-primary" href="http://www.eluniversal.com/vida/130928/curiosity-encontro-restos-de-agua-en-el-polvo-de-marte" target="_blank" role="button">Leer más</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://media.impacto.mx/imagenes/large/51705fe440385b377900000a.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>El planeta más parecido a la Tierra fuera del Sistema Solar</h1>
+              <p>A 430 años luz de la Tierra, fuera de nuestro Sistema Solar, hay un pequeño planeta con una masa y una densidad similar al nuestro y que orbita una estrella parecida al Sol.</p>
+              <p><a class="btn btn-lg btn-primary" href="http://www.elmundo.es/ciencia/2013/10/30/5271485261fd3d6b798b4576.html" target="_blank" role="button">Descúbrelo</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://www.cronicanorte.es/wp-content/uploads/2012/08/perseidas1.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Para que pidas cientos de deseos</h1>
+              <p>Un calendario actualizado con las próximas lluvias de meteoros observables. ¡No sólo de las del verano vive el hombre!</p>
+              <p><a class="btn btn-lg btn-primary" href="http://espanol.earthsky.org/guias-astronomicas/guia-de-lluvia-de-estrellas" target="_blank" role="button">Consúltalo</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="http://uranus.jouwweb.nl/upload/0/1/6/uranus/uranus.large.jpg" alt="Generic placeholder image">
+          <h2>Conoce a Urano</h2>
+          <p>Al contrario que los demás</p>
+          <p><a class="btn btn-default" href="#Urano" role="button">Léelo aquí &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="dist/img/andromeda.jpg" alt="Generic placeholder image">
+          <h2>De vuelta al pasado</h2>
+          <p>El futuro de la astronomía bebe de su prehistoria</p>
+          <p><a class="btn btn-default" href="#andro" role="button">Léelo aquí &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="http://www.daviddarling.info/images/E0102-723.jpg" alt="Generic placeholder image">
+          <h2>La Forja</h2>
+          <p>Y dentro de unos cientos millones de años el Sol será la más cercana que tengamos...</p>
+          <p><a class="btn btn-default" href="#forja" role="button">Léelo aquí &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading" id="Urano">Urano, <span class="text-muted">el planeta "torcido"</span></h2>
+          <p class="lead">El eje de rotación de Urano es casi horizontal, como si el planeta hubiera sido golpeado por un lado. Esta orientación poco común puede ser el resultado de una colisión con otro cuerpo del tamaño de un planeta en la temprana historia de Urano, lo que habría cambiado radicalmente su rotación. Algo similar le ocurriría, en teoría, a la Tierra previo a la formación de la Luna cuando impactó con el planeta Theia. Además, mientras que los campos magnéticos suelen estar alineados con la rotación del planeta, el campo de Urano está inclinado.<br> Debido a su inusual orientación, los anillos de Urano son perpendiculares al plano de su órbita.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="http://uranus.jouwweb.nl/upload/0/1/6/uranus/uranus.large.jpg">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5"><br><br><br><br><br>
+          <img class="featurette-image img-responsive" src="dist/img/andromeda.jpg">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading" id="andro">Alzar la vista <span class="text-muted">para ver el pasado</span></h2>
+          <p class="lead">Debido a su distancia, y a que la velocidad de la luz pese a ser elevada está limitada por el espacio-tiempo, mirar el cosmos es literalmente echar un vistazo al pasado. Cuerpos celestes o fenómenos cuya distancia en años luz es considerablemente mayor a lo que nuestro entendimiento supone como "ahora" los percibimos en este momento tal y como eran hace tanto tiempo como lo que le tome a la luz que despiden llegar hasta nuestros ojos. Así, el estado del Sol que percibimos es aproximadamente el que tuvo 8 minutos antes de nuestra percepción. Andrómeda concretamente es posible verla en el estado que tuvo hace unos 3 millones de años. Ello quiere decir que mientras los primeros homínidos comenzaron a poblar la Tierra durante el Pleistoceno, dicha galaxia estaba tal y como la vemos ahora...</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading" id="forja">La forja <span class="text-muted">estelar</span></h2>
+          <p class="lead">Toda la vida tal y como es entendida en la Tierra gira en torno a la existencia de los elementos de la tabla periódica. Lo curioso de todo esto es que la existencia de estos elementos -y de todo lo que es tangible y lo que no- pudo ser materializada gracias a la explosión de supernovas. Y es que en el interior de toda estrella, en un principio, sólo se alberga hidrógeno (el elemento de menor número atómico), a medida que pasan los años se agota, aumentando la presión en su interior y produciéndose entonces elementos de mayor número atómico hasta llegar al hierro, que rompe la estabilidad dado que no libera energía... la consume, produciendo una implosión que al rebotar en el núcleo produce una violenta explosión con la que todos los átomos de los elementos producidos en su núcleo son liberados al espacio.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="http://www.daviddarling.info/images/E0102-723.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="dist/js/holder.js"></script>
+  </body>
+</html>
